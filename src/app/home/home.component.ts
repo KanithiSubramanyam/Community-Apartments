@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  homePage = "assets/homepage-4.png";
+  homePage = "assets/homepage.jpg";
 
 }

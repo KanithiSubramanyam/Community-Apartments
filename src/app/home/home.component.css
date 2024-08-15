@@ -1,0 +1,36 @@
+.image-container .overlay {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-heading {
+  width: fit-content;
+  padding: 30px;
+  text-align: start;
+}
+
+.homepage-heading h1 {
+  font-size: 4vw; /* Responsive font size */
+  font-weight: 700;
+  color: #405D72;
+  margin-bottom: 50px; /* Adjusted for better spacing */
+}
+
+.homepage-heading p {
+  font-size: 1.2rem; /* Adjusted for consistency */
+  color: #758694; /* Matches the color palette */
+}
+
+@media (min-width: 1024px) {
+  .homepage-heading{
+    margin-top: 200px;
+    margin-left: 50px;
+  }
+}
+
+
+
