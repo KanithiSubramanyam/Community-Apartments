@@ -1,84 +1,118 @@
-<nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{
-  'scrolled': isScrolled,
-  'shadow-lg' : isScrolled,
-  'bg-color' : isScrolled
-}" >
-    <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">
-        <img
-          [src]="logo"
-          alt="Logo"
-          class="d-inline-block align-text-top px-lg-4"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div
-        class="offcanvas offcanvas-end"
-        tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel"
-      >
-        <div class="offcanvas-header p-2"
-        
+<nav
+  class="navbar navbar-expand-lg fixed-top"
+  [ngClass]="{
+    scrolled: isScrolled,
+    'shadow-lg': isScrolled,
+    'bg-color': isScrolled
+  }"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand"
+      [routerLink]="''"
+      [routerLinkActive]="'active'"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img
+        [src]="logo"
+        alt="Logo"
+        class="d-inline-block align-text-top px-lg-4"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header p-2">
+        <a
+          [routerLink]="''"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
         >
-          <a [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}"> 
-            <img
+          <img
             [src]="offcanvasLogo"
             alt="Logo"
             class="d-inline-block align-text-top my-1"
           />
-          </a>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body d-lg-flex justify-content-between">
-          <ul class="navbar-nav  ms-lg-4 fw-semibold">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" [routerLink]="'about'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" [routerLink]="'amenities'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}"
-                >Amenities</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" [routerLink]="'contact'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">Contact</a>
-            </li>
-          </ul>
-          <div class="contact d-flex flex-row  fw-semibold">
-            <div class="mobile-number">
-                <i class="fa-solid fa-phone"></i> 
-                <span class="text-grey"> Phone Number</span> 
-                <br> 
-                <span>  +91 1234567899</span>
-            
-            </div>
-            <div class="email">
-                <i class="fas fa-envelope"></i> 
-                <span class="text-grey"> Email Address</span> 
-                <br>
-                <span>  contact&#64;sgs.com</span>
-            </div>
+        </a>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-lg-flex justify-content-between">
+        <ul class="navbar-nav ms-lg-4 fw-semibold">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="''"
+              [routerLinkActive]="'active'"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="'about'"
+              [routerLinkActive]="'active'"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >About Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="'amenities'"
+              [routerLinkActive]="'active'"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Amenities</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="'contact'"
+              [routerLinkActive]="'active'"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="contact d-flex flex-row fw-semibold">
+          <div class="mobile-number">
+            <i class="fa-solid fa-phone"></i>
+            <span class="text-grey"> Phone Number</span>
+            <br />
+            <span> +91 1234567899</span>
+          </div>
+          <div class="email">
+            <i class="fas fa-envelope"></i>
+            <span class="text-grey"> Email Address</span>
+            <br />
+            <span> contact&#64;sgs.com</span>
           </div>
         </div>
       </div>
     </div>
-  </nav>
-  
+  </div>
+</nav>
