@@ -2,11 +2,19 @@
     /* background-color: #758694; */
     height: 100px !important;
     font-size:large;
+
 }
 .navbar img{
     height:80px;
     margin: 10px 0px;
 }
+
+.navbar {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+   
+  
 
 @media (min-width: 992px) {
     .navbar-brand {
