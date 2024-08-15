@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-left: 20px;
+}
+
+ul.list-unstyled {
+    padding-left: 0;
+    font-size: 1rem;
+    list-style-type: none; /* Removes default bullet points */
+}
+
+ul.list-unstyled li {
+    margin-bottom: 1rem; /* Adds space between each list item */
+   
+}
+
+ul.list-unstyled i {
+    color: #0a0a0a;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.carousel-item img {
+    object-fit: cover;
+    height: 300px; /* Adjust based on your needs */
+    margin-top: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Custom color for the carousel controls */
+}
+
+@media (max-width: 767.98px) {
+    .carousel-item img {
+        height: auto;
+        
+    }
+}
