@@ -13,6 +13,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class NavbarComponent implements OnInit{
 
   isScrolled = false;
+  logo = 'assets/SGS-logo.png';
+  offcanvasLogo = 'assets/SGS.png'
 
   ngOnInit() {
     if (typeof window !== 'undefined') {

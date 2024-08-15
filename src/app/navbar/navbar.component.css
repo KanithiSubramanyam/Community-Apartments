@@ -36,6 +36,9 @@
         padding: 0px 20px;
         gap: 0;
     }
+    .bg-color{
+        background-color: #758694;
+    }
 
 }
 

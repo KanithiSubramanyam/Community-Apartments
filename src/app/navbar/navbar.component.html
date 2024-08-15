@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{
   'scrolled': isScrolled,
-  'bg-white' : isScrolled,
-  'shadow-lg' : isScrolled
-}">
+  'shadow-lg' : isScrolled,
+  'bg-color' : isScrolled
+}" >
     <div class="container-fluid">
       <a class="navbar-brand" [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">
         <img
-          src="../../../assets/SGS-logo.png"
+          [src]="logo"
           alt="Logo"
           class="d-inline-block align-text-top px-lg-4"
         />
@@ -33,7 +33,7 @@
         >
           <a [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}"> 
             <img
-            src="../../../assets/SGS.png"
+            [src]="offcanvasLogo"
             alt="Logo"
             class="d-inline-block align-text-top my-1"
           />
@@ -46,7 +46,7 @@
           ></button>
         </div>
         <div class="offcanvas-body d-lg-flex justify-content-between">
-          <ul class="navbar-nav  ms-lg-4">
+          <ul class="navbar-nav  ms-lg-4 fw-semibold">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">Home</a>
             </li>
@@ -62,19 +62,19 @@
               <a class="nav-link active" aria-current="page" [routerLink]="'contact'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">Contact</a>
             </li>
           </ul>
-          <div class="contact d-flex flex-row ">
+          <div class="contact d-flex flex-row  fw-semibold">
             <div class="mobile-number">
                 <i class="fa-solid fa-phone"></i> 
-                <span class="text-muted"> Phone Number</span> 
+                <span class="text-grey"> Phone Number</span> 
                 <br> 
-                <span>+91 1234567899</span>
+                <span>  +91 1234567899</span>
             
             </div>
             <div class="email">
                 <i class="fas fa-envelope"></i> 
-                <span class="text-muted"> Email Address</span> 
+                <span class="text-grey"> Email Address</span> 
                 <br>
-                <span>contact&#64;sgs.com</span>
+                <span>  contact&#64;sgs.com</span>
             </div>
           </div>
         </div>
