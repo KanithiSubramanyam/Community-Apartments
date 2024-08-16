@@ -1,55 +1,63 @@
-.navbar, .offcanvas-header{
-    /* background-color: #758694; */
-    height: 100px !important;
-    font-size:large;
+.navbar,
+.offcanvas-header {
+  /* background-color: #758694; */
+  height: 100px !important;
+  font-size: large;
 }
-.navbar img{
-    height:80px;
-    margin: 10px 0px;
+.navbar img {
+  height: 80px;
+  margin: 10px 0px;
+}
+
+.navbar {
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 @media (min-width: 992px) {
-    .navbar-brand {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .offcanvas-body {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .contact{
-        flex-direction: row !important;
-        gap: 20px !important;  
-        margin-right: 25px;
-    }
-    .email, .mobile-number{
-        padding: 0px 20px;
-        gap: 0;
-    }
-
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .offcanvas-body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact {
+    flex-direction: row !important;
+    gap: 20px !important;
+    margin-right: 25px;
+  }
+  .email,
+  .mobile-number {
+    padding: 0px 20px;
+    gap: 0;
+  }
+  .bg-color {
+    background-color: #758694;
+  }
 }
 
-@media(max-width: 992px) {
-   .offcanvas-body {
+@media (max-width: 992px) {
+  .offcanvas-body {
     display: flex;
     flex-direction: column;
-    }
-    .contact{
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-    .mobile-number, .email{
-        padding: 10px 0px;
-        text-align: center;
-        background-color: #758694;
-        border-radius: 4px;
-    }
-    .mobile-number span, .email span{
-        color: black !important;
-    }
-
+  }
+  .contact {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+  .mobile-number,
+  .email {
+    padding: 10px 0px;
+    text-align: center;
+    background-color: #758694;
+    border-radius: 4px;
+  }
+  .mobile-number span,
+  .email span {
+    color: black !important;
+  }
 }
-
-
