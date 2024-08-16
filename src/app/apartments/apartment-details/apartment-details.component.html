@@ -1,24 +1,49 @@
 <div class="apartment-details" *ngIf="apartment">
-  <div class="image-container position-relative">
+  <div class="image-container position-relative m-0 p-0">
     <img
-        class="w-100"
-        src="https://res.cloudinary.com/dljmzqxza/images/c_fill/f_auto,q_100/v1679476400/building-amenities-lounge-area/building-amenities-lounge-area.jpg?_i=AA"
-        height="300px"
+      class="w-100"
+      src="https://res.cloudinary.com/dljmzqxza/images/c_fill/f_auto,q_100/v1679476400/building-amenities-lounge-area/building-amenities-lounge-area.jpg?_i=AA"
+      height="300px"
+      alt="Apartment Details"
     />
     <div class="overlay">
-        <p class="fw-bolder" style="font-family: sans-serif">THE ULTIMATE LUXURY</p>
-        <h2>Apartment Details</h2>
+      <p class="fw-bolder" style="font-family: sans-serif">THE ULTIMATE LUXURY</p>
+      <h2>Apartment Details</h2>
     </div>
-</div>
-    <h2>{{ apartment.name }}</h2>
-    <img [src]="apartment.imageUrl" alt="{{ apartment.name }}" class="img-fluid mb-3" />
-    <h5>Price: {{ apartment.price }}</h5>
-    <p>{{ apartment.description }}</p>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item" *ngFor="let amenity of apartment.amenities">
-        {{ amenity }}
-      </li>
-    </ul>
-    <a [routerLink]="['/apartments']"  [routerLinkActive]="'active'" class="btn btn-primary mt-3">Back to Apartments</a>
   </div>
   
+  <div class="jumbotron jumbotron-fluid py-4">
+    <h2 class="apartment-name">{{ apartment.name }}</h2>
+    
+    <img
+      [src]="apartment.imageUrl"
+      alt="{{ apartment.name }}"
+      class="apartment-image img-fluid mb-3"
+    />
+    
+    <h5 class="price">Price: {{ apartment.price }}</h5>
+    
+    <p class="description">{{ apartment.description }}</p>
+  </div>
+  
+  <div class="details-container">
+    <h3 class="section-heading">Amenities Provided</h3>
+    <ul class="amenities list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let amenity of apartment.amenities">
+        <i class="fas fa-check-circle"></i> {{ amenity }}
+      </li>
+    </ul>
+    
+    <div class="jumbotron jumbotron-fluid py-4">
+      <h3 class="section-heading">House Rules</h3>
+      <div class="underline"></div>
+      <ul class="house-rules list-group">
+        <li class="list-group-item" *ngFor="let rule of apartment.houseRules">
+          <i class="fas fa-check"></i> {{ rule }}
+        </li>
+      </ul>
+    </div>
+    
+    <a routerLink="/apartments" class="btn btn-primary mt-3">Back to Apartments</a>
+  </div>
+</div>
