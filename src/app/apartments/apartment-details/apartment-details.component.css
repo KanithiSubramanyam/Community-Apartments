@@ -30,19 +30,6 @@
     letter-spacing: 4px;
     font-family: Old Standard TT, serif;
   }
- 
-
-.card-body i {
-    margin-right: 5px;
-    padding-bottom:20px;
-}
-
-.availability {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.apartments{
-  margin-top:100px !important;
-}
+.apartment-details{
+    margin-top:100px !important;
+  }

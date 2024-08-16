@@ -1,0 +1,24 @@
+<div class="apartment-details" *ngIf="apartment">
+  <div class="image-container position-relative">
+    <img
+        class="w-100"
+        src="https://res.cloudinary.com/dljmzqxza/images/c_fill/f_auto,q_100/v1679476400/building-amenities-lounge-area/building-amenities-lounge-area.jpg?_i=AA"
+        height="300px"
+    />
+    <div class="overlay">
+        <p class="fw-bolder" style="font-family: sans-serif">THE ULTIMATE LUXURY</p>
+        <h2>Apartment Details</h2>
+    </div>
+</div>
+    <h2>{{ apartment.name }}</h2>
+    <img [src]="apartment.imageUrl" alt="{{ apartment.name }}" class="img-fluid mb-3" />
+    <h5>Price: {{ apartment.price }}</h5>
+    <p>{{ apartment.description }}</p>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let amenity of apartment.amenities">
+        {{ amenity }}
+      </li>
+    </ul>
+    <a [routerLink]="['/apartments']"  [routerLinkActive]="'active'" class="btn btn-primary mt-3">Back to Apartments</a>
+  </div>
+  

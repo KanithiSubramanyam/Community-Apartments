@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { ApartmentsComponent } from './apartments/apartments.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
 import { ContactComponent } from './contact/contact.component';
+import { ApartmentDetailsComponent } from './apartments/apartment-details/apartment-details.component'; 
 
 export const routes: Routes = [
     {path : '', component : HomeComponent},
@@ -11,5 +12,6 @@ export const routes: Routes = [
     {path: 'apartments', component:ApartmentsComponent},
     {path : 'amenities', component : AmenitiesComponent},
     {path : 'contact', component : ContactComponent},
+    { path: 'apartments/:name', component: ApartmentDetailsComponent },
     {path : '**', component : HomeComponent}
 ];
