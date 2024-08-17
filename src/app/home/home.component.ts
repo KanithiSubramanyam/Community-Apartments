@@ -16,4 +16,9 @@ export class HomeComponent {
   hotelIcon = "assets/hotelIcon.png";
   aboutUsBackground = "assets/aboutUsBackground.jpg";
   interior1 = "assets/interior-1.jpg";
+  gym = "assets/gym-1.jpg";
+  pool = "assets/swimming-2.jpg";
+  yoga = "assets/yoga-1.jpg";
+  sport = "assets/sport.jpg";
+  pp = "assets/pp.jpg";
 }
