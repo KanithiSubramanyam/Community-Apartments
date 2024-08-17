@@ -6,6 +6,8 @@ import { AboutUsMainComponent } from '../about/about-us-main/about-us-main.compo
 import { Apartment } from '../Models/apartment';
 import { ApartmentService } from '../Services/aparment.service';
 import { map } from 'rxjs';
+import {AmenitiesService} from '../Services/amenities.service';
+import { Amenities } from '../Models/amenities';
 @Component({
   selector: 'home',
   standalone: true,
@@ -27,16 +29,14 @@ export class HomeComponent implements OnInit{
   noImage = "assets/no-image.jpg";
   services : Services[] ;
   apartments : Apartment[] ;
-
+  amenities : Amenities[];
   servicesService : ServicesService = inject(ServicesService);
   apartmentService : ApartmentService = inject(ApartmentService);
+  aminitieService : AmenitiesService = inject(AmenitiesService);
 
   ngOnInit() {
     this.services = this.servicesService.getServices();
     this.apartments = this.apartmentService.getAllApartments().slice(0, 3);
-    
+    this.amenities = this.aminitieService.getAllAmenities();
   }
-
-
-
 }

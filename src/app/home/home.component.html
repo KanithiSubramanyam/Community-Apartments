@@ -40,14 +40,14 @@
         Consectetur.
       </p>
     </div>
-    <div class="row">
-      <div class="col-lg-4 " *ngFor="let apartment of apartments">
-        <div class="card" style="--bs-card-border-width: none">
+    <div class="row mx-lg-0 mx-md-5">
+      <div class="col-lg-4 col-md-6" *ngFor="let apartment of apartments">
+        <div class="card mt-4 mt-lg-0" style="--bs-card-border-width: none">
           <img [src]="apartment.imageUrl?apartment.imageUrl:noImage" 
           class="card-img-top rounded object-fit-cover w-100" alt="Apartment Image" style="height: 200px;" />
-          <div class="card-body m-0 p-0 bg-secondary-color">
-            <h5 class="card-title pt-4 fw-bold">{{  apartment.name | uppercase }}</h5>
-            <hr class="fw-bold" />
+          <div class="card-body m-0 p-0 bg-secondary-color ">
+            <h5 class="card-title pt-4 fw-bold text-center text-lg-start">{{  apartment.name | uppercase }}</h5>
+            <hr class="fw-bolder" />
             <ul
               class="list-group fw-semibold text-secondary"
               style="list-style: none"
@@ -66,12 +66,12 @@
 <!-- apartments end -->
 
 <!-- our services  -->
-<section class="services container-fluid px-md-5 my-md-5">
+<section class="services container-fluid px-md-5 my-5 ">
   <div class="text-center my-md-3 pb-md-5 pt-lg-4">
     <h2 class="text-center fs-2 fw-bold my-md-3">Why Choose Us</h2>
   </div>
   <div class="mx-lg-5 text-center">
-    <div class="row services-row">
+    <div class="row services-row ">
       <div
         class="col-lg-4 col-md-6 text-center"
         *ngFor="let service of services"
@@ -81,7 +81,7 @@
           [ngClass]="service.icon"
         ></i>
         <h5 class="fw-bold mt-4">{{ service.name }}</h5>
-        <p>
+        <p >
           {{ service.description }}
         </p>
       </div>
@@ -92,7 +92,7 @@
 
 <!-- Amenities  -->
 <section class="amenities container-fluid bg-secondary-color">
-  <div class="py-md-5">
+  <div class="py-md-5 py-3">
     <h2 class="text-center fs-2 fw-bold my-md-3">Amenities</h2>
     <p class="text-center m-md-3 my-md-3 p-lg-3 px-md-5">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut facilis,
@@ -100,92 +100,34 @@
       deserunt ad obcaecati porro nostrum, ratione commodi debitis. Consectetur.
     </p>
   </div>
-  <div class="mx-md-5">
+  <div class="mx-md-5 mx-2">
     <div
       id="carouselExampleDark"
       class="carousel carousel-dark slide"
       data-bs-ride="carousel"
     >
       <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
+        <button 
+        *ngFor="let amenity of amenities; let i = index"
+        type="button"
+        [attr.data-bs-target]="'#carouselExampleDark'"
+        [attr.data-bs-slide-to]="i"
+        [ngClass]="{'active': i === 0}"
+        [attr.aria-current]="i === 0 ? 'true' : null"
+        [attr.aria-label]="'Slide ' + (i + 1)"
+      ></button>
       </div>
       <div class="carousel-inner pb-md-5">
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item" [attr.data-bs-interval]="aminite.id + '000'" *ngFor="let aminite of amenities; let i = index" [ngClass]="{'active' : i == 0}"> 
           <div class="row">
             <div class="col-md-7">
-              <img [src]="gym" class="d-block w-100 rounded-4" alt="..." />
+              <img [src]="aminite.images[0]" class="d-block w-100 rounded-4" alt="..." />
             </div>
-            <div class="col-md-5 d-flex flex-column justify-content-center">
+            <div class="col-md-5 d-flex flex-column justify-content-center py-3 py-md-0">
               <div class="px-lg-3">
-                <h5 class="">Fitness Center</h5>
+                <h5 class="">{{ aminite.title | uppercase }}</h5>
                 <p class="">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptas soluta accusamus quaerat corrupti. Eveniet facere,
-                  quisquam optio est odio sed maiores ex alias repellendus autem
-                  repudiandae iste quos dicta sint iure earum molestiae
-                  quibusdam quas doloremque! Deleniti quo blanditiis officiis
-                  ullam iusto illo obcaecati ipsum earum. Aliquam ipsa ipsam
-                  quibusdam!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <div class="row">
-            <div class="col-md-7">
-              <img [src]="pool" class="d-block w-100 rounded-4" alt="..." />
-            </div>
-            <div class="col-md-5 d-flex align-items-center">
-              <div>
-                <h5 class="">Water Club</h5>
-                <p class="">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Illum deserunt minima nulla alias blanditiis consequatur,
-                  mollitia nesciunt illo aperiam accusamus culpa reiciendis
-                  sequi ea eligendi, debitis, enim vero reprehenderit dicta.
-                  Sint sequi, illum vitae in voluptatem ex placeat
-                  necessitatibus incidunt rerum dicta dolores amet, quasi quas?
-                  Non harum similique quasi?
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <div class="row">
-            <div class="col-md-7">
-              <img [src]="yoga" class="d-block w-100 rounded-4" alt="..." />
-            </div>
-            <div class="col-md-5 d-flex align-items-center">
-              <div>
-                <h5 class="">Entertainment Floor</h5>
-                <p class="">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Voluptate quibusdam molestiae rem, iure repudiandae, soluta
-                  iste quam eaque et enim culpa nam fugit assumenda quas facere
-                  aspernatur provident possimus officiis? Id doloribus maxime,
-                  similique eveniet illum sunt non ab alias voluptatibus est
-                  aliquam mollitia odit magni eum quibusdam deserunt? Aut!
+                  {{ aminite.description }}
                 </p>
               </div>
             </div>
