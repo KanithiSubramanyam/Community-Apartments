@@ -1,3 +1,45 @@
 .aboutUs{
     margin-top:100px !important;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    }
+  
+.text-below{
+    background-color: #758694;
+  }
+  .aboutUsContent p{
+    text-align: justify;
+  }
+  .bg-color {
+    /* width: fit-content; */
+    background-color: #405D72;
+  }
+  
+  .bg-secondary-color{
+    width: fit-content;
+    background-color: #758694;
+  }
+  
+  .bg-color:hover {
+    background-color: #758694;
+  }
+  .Achievements{
+    background-color: #f7e7dc;
+  }
+  .color{
+    color: #ffc49d;
+  }
+  .btn-custom-outline {
+    border-color: #ffc49d;
+    color: #ffc49d;
+}
+.btn-custom-outline:hover {
+    background-color: #ffc49d;
+    color: #fff;
+}
