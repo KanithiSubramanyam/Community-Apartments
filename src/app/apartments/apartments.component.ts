@@ -11,6 +11,8 @@ import { ApartmentService,Apartment } from '../Services/aparment.service';
   styleUrls: ['./apartments.component.css'],
 })
 export class ApartmentsComponent implements OnInit {
+  aboutUsBreadcome = "assets/aboutUsBreadcome.jpg";
+
   apartments: Omit<Apartment, 'description' | 'amenities'>[] = [];
 
   constructor(private apartmentService: ApartmentService) {}

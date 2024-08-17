@@ -90,21 +90,18 @@
   background-color: #758694;
 }
 
-/* about us end  */
-
-/* apartments */
-
+.bg-secondary-color{
+  background-color: #f7e7dc;
+}
 h2{
   color: #405D72;
 }
 
-/* apartments ended */
-
-/* our services  */
-
-/* .services-row i{
-  padding:10px;
-  border: 1px solid black;
-} */
-
-
+.btn-custom-outline {
+  border-color: #ffc49d;
+  color: #ffc49d;
+}
+.btn-custom-outline:hover {
+  background-color: #ffc49d;
+  color: #fff;
+}
