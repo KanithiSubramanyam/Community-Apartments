@@ -10,6 +10,7 @@ export interface Apartment {
   description: string;  // Detailed description of the apartment
   amenities: string[];  // List of amenities provided
   houseRules?:string[];
+  cancellation:string;
 }
 
 @Injectable({
@@ -38,6 +39,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 2',
@@ -59,6 +61,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 3',
@@ -80,6 +83,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 4',
@@ -101,6 +105,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 5',
@@ -122,6 +127,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 6',
@@ -143,6 +149,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 7',
@@ -164,6 +171,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 8',
@@ -185,6 +193,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     },
     {
       name: 'Apartment Name 9',
@@ -206,6 +215,7 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
     }
   ];
 

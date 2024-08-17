@@ -26,9 +26,10 @@
     <p class="description">{{ apartment.description }}</p>
   </div>
   
-  <div class="details-container">
-    <h3 class="section-heading">Amenities Provided</h3>
-    <ul class="amenities list-group list-group-flush">
+  <div class="details-container ">
+    <h3 class="section-heading ">Amenities Provided</h3>
+    
+    <ul class="amenities list-group list-group-flush ">
       <li class="list-group-item" *ngFor="let amenity of apartment.amenities">
         <i class="fas fa-check-circle"></i> {{ amenity }}
       </li>
@@ -43,7 +44,17 @@
         </li>
       </ul>
     </div>
+
+    <div class="cancellation-policy mt-4">
+      <h3>Cancellation Policy</h3>
+      <p class="cancellation-description">{{ apartment.cancellation }}</p>
+    </div>
     
-    <a routerLink="/apartments" class="btn btn-primary mt-3">Back to Apartments</a>
+    
   </div>
+  <div class="btn-container">
+    <a routerLink="/apartments" class="btn btn-center btn-primary mt-3 ">Back to Apartments</a>
+
+  </div>
+  
 </div>
