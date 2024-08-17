@@ -1,24 +1,42 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
-
+import { Component, HostListener, inject, OnInit } from '@angular/core';
+import { Services } from '../Models/services';
+import { ServicesService } from '../Services/services.service';
+import { AboutUsMainComponent } from '../about/about-us-main/about-us-main.component';
+import { Apartment } from '../Models/apartment';
+import { ApartmentService } from '../Services/aparment.service';
+import { map } from 'rxjs';
+import {AmenitiesService} from '../Services/amenities.service';
+import { Amenities } from '../Models/amenities';
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AboutUsMainComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
   homePage = "assets/homepage.jpg";
-  aboutUs1 = "assets/interior-2.jpg";
-  aboutUs2 = "assets/homeAboutUs-2.jpg";
-  hotelIcon = "assets/hotelIcon.png";
-  aboutUsBackground = "assets/aboutUsBackground.jpg";
+  homePageSmall = "assets/homeAboutUs-1.jpg"
+
   interior1 = "assets/interior-1.jpg";
   gym = "assets/gym-1.jpg";
   pool = "assets/swimming-2.jpg";
   yoga = "assets/yoga-1.jpg";
   sport = "assets/sport.jpg";
   pp = "assets/pp.jpg";
+  noImage = "assets/no-image.jpg";
+  services : Services[] ;
+  apartments : Apartment[] ;
+  amenities : Amenities[];
+  servicesService : ServicesService = inject(ServicesService);
+  apartmentService : ApartmentService = inject(ApartmentService);
+  aminitieService : AmenitiesService = inject(AmenitiesService);
+
+  ngOnInit() {
+    this.services = this.servicesService.getServices();
+    this.apartments = this.apartmentService.getAllApartments().slice(0, 3);
+    this.amenities = this.aminitieService.getAllAmenities();
+  }
 }

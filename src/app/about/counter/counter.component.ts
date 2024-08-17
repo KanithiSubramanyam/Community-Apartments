@@ -24,6 +24,6 @@ export class CounterComponent implements OnInit{
         this.counter = value;
         clearInterval(interval);
       }
-    }, 5);
+    }, 10);
   }
 }

@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './amenities.component.css'
 })
 export class AmenitiesComponent {
-  
+  aboutUsBreadcome = "assets/aboutUsBreadcome.jpg";
+
+  amenities = [];
 }
