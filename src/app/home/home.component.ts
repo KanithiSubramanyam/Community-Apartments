@@ -1,25 +1,42 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
-
+import { Component, HostListener, inject, OnInit } from '@angular/core';
+import { Services } from '../Models/services';
+import { ServicesService } from '../Services/services.service';
+import { AboutUsMainComponent } from '../about/about-us-main/about-us-main.component';
+import { Apartment } from '../Models/apartment';
+import { ApartmentService } from '../Services/aparment.service';
+import { map } from 'rxjs';
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AboutUsMainComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
   homePage = "assets/homepage.jpg";
-  aboutUs1 = "assets/interior-2.jpg";
-  aboutUs2 = "assets/homeAboutUs-2.jpg";
-  hotelIcon = "assets/hotelIcon.png";
-  aboutUsBackground = "assets/aboutUsBackground.jpg";
+  homePageSmall = "assets/homeAboutUs-1.jpg"
+
   interior1 = "assets/interior-1.jpg";
   gym = "assets/gym-1.jpg";
   pool = "assets/swimming-2.jpg";
   yoga = "assets/yoga-1.jpg";
   sport = "assets/sport.jpg";
   pp = "assets/pp.jpg";
-  map = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30390.27949824966!2d83.36069799999999!3d17.8018018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1723884622085!5m2!1sen!2sin";
+  noImage = "assets/no-image.jpg";
+  services : Services[] ;
+  apartments : Apartment[] ;
+
+  servicesService : ServicesService = inject(ServicesService);
+  apartmentService : ApartmentService = inject(ApartmentService);
+
+  ngOnInit() {
+    this.services = this.servicesService.getServices();
+    this.apartments = this.apartmentService.getAllApartments().slice(0, 3);
+    
+  }
+
+
+
 }

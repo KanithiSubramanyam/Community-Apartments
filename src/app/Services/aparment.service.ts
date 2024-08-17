@@ -1,17 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Apartment } from '../Models/apartment';
+import { map } from 'rxjs';
 
-// Define the interface for a detailed apartment, including all properties
-export interface Apartment {
-  name: string;
-  price: string;
-  availability: string;
-  imageUrl: string;
-  features: string[];
-  description: string;  // Detailed description of the apartment
-  amenities: string[];  // List of amenities provided
-  houseRules?:string[];
-  cancellation:string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +13,8 @@ export class ApartmentService {
       name: 'Apartment Name 1',
       price: '$1,200/month',
       availability: 'Available-Book Now',
-      imageUrl: 'assets/apar-1.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      imageUrl: 'assets/interior-1.jpg',
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'This apartment offers stunning views and top-notch facilities.Spacious double-bedroom apartment with a modern kitchen and stunning city views. Includes a private balcony and access to a state-of-the-art gym.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -46,7 +36,7 @@ export class ApartmentService {
       price: '$1,500/month',
       availability: 'Not Available',
       imageUrl: 'assets/apar-2.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'A luxurious apartment with modern features.Elegant apartment featuring a large master suite and an open-concept living area. Enjoy exclusive amenities such as a rooftop pool and 24/7 concierge service.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -67,8 +57,8 @@ export class ApartmentService {
       name: 'Apartment Name 3',
       price: '$1,800/month',
       availability: 'Available-Book Now',
-      imageUrl: 'assets/apar-3.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      imageUrl: 'assets/apartment-2.jpg',
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'Spacious and comfortable, with all modern amenities.Spacious double-bedroom apartment with a modern kitchen and stunning city views. Includes a private balcony and access to a state-of-the-art gym.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -227,5 +217,9 @@ export class ApartmentService {
   // Method to get detailed information of a specific apartment by name
   getApartmentDetails(name: string): Apartment | undefined {
     return this.apartments.find(apartment => apartment.name === name);
+  }
+
+  getAllApartments(): Apartment[] {
+    return this.apartments;
   }
 }

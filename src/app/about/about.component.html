@@ -19,244 +19,120 @@
   </div>
 
   <div class="container py-5">
-    <!-- <h2 class="text-center fs-2 fw-bold my-md-3">About SGS Apartments</h2> -->
-    <div class="row">
-      <div class="col-lg-6 d-flex flex-row justify-content-between">
-        <!-- First box with icon and text -->
-        <div class="d-flex flex-column w-50 me-sm-4">
-          <div class="box p-4 mb-4 text-center bg-white shadow-lg rounded">
-            <i class="fa-solid fa-people-group fa-3x mb-3"></i>
-            <h5>Strong Team</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-          <img
-            [src]="aboutUs2"
-            alt="about1"
-            class="img-fluid w-100 h-auto rounded"
-          />
-        </div>
 
-        <!-- Image with text below it -->
-        <div class="d-flex flex-column w-50 me-sm-4 my-4">
-          <img
-            [src]="aboutUs1"
-            alt="about1"
-            class="img-fluid w-100 h-auto rounded-top"
-          />
-          <div class="text-below p-4 text-white rounded-bottom text-center">
-            <img [src]="hotelIcon" alt="hotel" class="img-fluid mb-2" />
-            <h5>Luxury Apartment</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- About Us content -->
-      <div
-        class="aboutUsContent col-lg-6 d-flex flex-column justify-content-center px-md-4"
-      >
-        <h5 class="text-muted fw-bold font-monospace fs-4">About Us</h5>
-        <h2 class="fs-1">Discover Our Apartments.</h2>
-        <p class="fw-semibold">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Enim est sequi, sit magnam exercitationem
-          voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Nihil rem harum eius nemo aspernatur modi nostrum molestias ab minus
-          quae laborum sapiente soluta, praesentium minima?
-        </p>
-        <p class="fw-semibold">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="Achievements">
-    <div class="m-5 p-5">
-      <div class="my-2 py-2 text-center">
-        <p class="fw-bolder fs-5 text-success">Achievements and Milestones</p>
-        <p class="fs-2 fw-bold">The cornerstones of our growth and success.</p>
-      </div>
-      <div class="row my-5">
-        <div class="col-lg-6">
-          <img
-            [src]="aboutUsAchivements"
-            alt="responsabilites"
-            class="w-100 h-auto rounded-4"
-          />
-        </div>
-
-        <div class="col-lg-6 mt-3">
-          <div class="row justify-content-center">
-            <div class="col-md-6 my-4">
-              <div
-                class="bg-white text-center py-5 mb-4 ms-5"
-                style="border-radius: 20px 20px 0px 20px"
-              >
-                <app-counter
-                  [targetValue]="1500"
-                  class="text-success"
-                ></app-counter>
-                <p class="fs-6 fw-semibold text-muted">Happy Users</p>
-              </div>
-              <div
-                class="bg-white text-center py-5 ms-5"
-                style="border-radius: 20px 0px 20px 20px"
-              >
-                <app-counter [targetValue]="15000" class="color"></app-counter>
-                <p class="fs-6 fw-semibold text-muted">Area(sqft)</p>
-              </div>
-            </div>
-
-            <div class="col-md-6 my-4">
-              <div
-                class="bg-white text-center py-5 mt-5 mb-4 me-5"
-                style="border-radius: 20px 20px 20px 0px"
-              >
-                <app-counter [targetValue]="33" class="color"></app-counter>
-                <p class="fs-6 fw-semibold text-muted">Events</p>
-              </div>
-              <div
-                class="bg-white text-center py-5 me-5"
-                style="border-radius: 0px 20px 20px 20px"
-              >
-                <app-counter
-                  [targetValue]="230"
-                  class="text-success"
-                ></app-counter>
-                <p class="fs-6 fw-semibold text-muted">Flats</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <about-us-main></about-us-main>
   </div>
 </section>
-<section class="services container mb-md-5">
-  <div class="text-center my-md-3 pb-md-5 pt-lg-4 ">
+
+<!-- milestones  -->
+<div class="Achievements">
+  <div class="m-5 p-5">
+    <div class="my-2 py-2 text-center">
+      <p class="fw-bolder fs-5 text-success">Achievements and Milestones</p>
+      <p class="fs-2 fw-bold">The cornerstones of our growth and success.</p>
+    </div>
+    <div class="row my-5">
+      <div class="col-lg-6">
+        <img
+          [src]="aboutUsAchivements"
+          alt="responsabilites"
+          class="w-100 h-auto rounded-4"
+        />
+      </div>
+
+      <div class="col-lg-6 mt-3">
+        <div class="row justify-content-center">
+          <div class="col-md-6 my-4">
+            <div
+              class="bg-white text-center py-5 mb-4 ms-5"
+              style="border-radius: 20px 20px 0px 20px"
+            >
+              <app-counter
+                [targetValue]="countOfUsers"
+                class="text-success"
+              ></app-counter>
+              <p class="fs-6 fw-semibold text-muted">Happy Users</p>
+            </div>
+            <div
+              class="bg-white text-center py-5 ms-5"
+              style="border-radius: 20px 0px 20px 20px"
+            >
+              <app-counter
+                [targetValue]="totalArea"
+                class="color"
+              ></app-counter>
+              <p class="fs-6 fw-semibold text-muted">Area(sqft)</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 my-4">
+            <div
+              class="bg-white text-center py-5 mt-5 mb-4 me-5"
+              style="border-radius: 20px 20px 20px 0px"
+            >
+              <app-counter
+                [targetValue]="countOfEvents"
+                class="color"
+              ></app-counter>
+              <p class="fs-6 fw-semibold text-muted">Events</p>
+            </div>
+            <div
+              class="bg-white text-center py-5 me-5"
+              style="border-radius: 0px 20px 20px 20px"
+            >
+              <app-counter
+                [targetValue]="countOfFlats"
+                class="text-success"
+              ></app-counter>
+              <p class="fs-6 fw-semibold text-muted">Flats</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end milestones  -->
+
+<!-- services  -->
+<section class="services container-fluid px-md-5 my-md-5">
+  <div class="text-center my-md-3 pb-md-5 pt-lg-4">
     <h2 class="text-center fs-2 fw-bold my-md-3">Our Services</h2>
   </div>
   <div class="mx-lg-5 text-center">
     <div class="row services-row">
-      <div class="col-lg-4 col-md-6 text-center">
+      <div
+        class="col-lg-4 col-md-6 text-center"
+        *ngFor="let service of services"
+      >
         <i
-          class="fa-solid fa-shield-halved fa-2x p-3 border border-dark border-2 rounded-circle"
+          class="fa-2x p-3 border border-dark border-2 rounded-circle"
+          [ngClass]="service.icon"
         ></i>
-        <h5 class="fw-bold mt-4">24/7 security</h5>
+        <h5 class="fw-bold mt-4">{{ service.name }}</h5>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis et
-          ipsum exercitationem porro tempore deserunt!
-        </p>
-      </div>
-      <div class="col-lg-4 col-md-6 text-center">
-        <i
-          class="fa-solid fa-wifi fa-2x p-3 border border-dark border-2 rounded-circle"
-        ></i>
-        <h5 class="fw-bold mt-4">free high speed wifi</h5>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis et
-          ipsum exercitationem porro tempore deserunt!
-        </p>
-      </div>
-      <div class="col-lg-4 col-md-6 text-center">
-        <i
-          class="fa-solid fa-hands-bubbles fa-2x p-3 border border-dark border-2 rounded-circle"
-        ></i>
-        <h5 class="fw-bold mt-4">Washer dryer</h5>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis et
-          ipsum exercitationem porro tempore deserunt!
-        </p>
-      </div>
-      <div class="col-lg-4 col-md-6 text-center">
-        <i
-          class="fa-solid fa-paw fa-2x p-3 border border-dark border-2 rounded-circle"
-        ></i>
-        <h5 class="fw-bold mt-4">Pet care</h5>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis et
-          ipsum exercitationem porro tempore deserunt!
-        </p>
-      </div>
-      <div class="col-lg-4 col-md-6 text-center">
-        <i
-          class="fa-solid fa-bed fa-2x p-3 border border-dark border-2 rounded-circle"
-        ></i>
-        <h5 class="fw-bold mt-4">Furniture cleaning & repair</h5>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis et
-          ipsum exercitationem porro tempore deserunt!
-        </p>
-      </div>
-      <div class="col-lg-4 col-md-6 text-center">
-        <i
-          class="fa-solid fa-truck-front fa-2x p-3 border border-dark border-2 rounded-circle"
-        ></i>
-        <h5 class="fw-bold mt-4">Automobile shipping & storage</h5>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis et
-          ipsum exercitationem porro tempore deserunt!
+          {{ service.description }}
         </p>
       </div>
     </div>
   </div>
 </section>
+<!-- services end  -->
 
+<!-- out team  -->
 <section>
   <div class="Achievements py-2">
     <div class="ourVolunteers text-center my-5">
       <p class="fw-bolder fs-5 color">Our Team</p>
       <p class="fw-bold fs-2">Our Expert Team Members</p>
       <div class="d-lg-flex grid gap-4 ps-2 mt-5 justify-content-center">
-        <div class="card" style="width: 18rem">
-          <img [src]="pp" class="card-img-top" alt="profile pic" />
+        <div class="card" style="width: 18rem" *ngFor="let member of ourTeam">
+          <img [src]="member.image" class="card-img-top" alt="profile pic" />
           <div class="card-body">
-            <h5 class="card-title">President</h5>
+            <h5 class="card-title">{{ member.name }}</h5>
+            <h5 class="card-subtitle">{{ member.postion }}</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img [src]="pp" class="card-img-top" alt="profile pic" />
-          <div class="card-body">
-            <h5 class="card-title">Vice President</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img [src]="pp" class="card-img-top" alt="profile pic" />
-          <div class="card-body">
-            <h5 class="card-title">Manager</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem">
-          <img [src]="pp" class="card-img-top" alt="profile pic" />
-          <div class="card-body">
-            <h5 class="card-title">Assistant Manager</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
+              {{ member.description }}
             </p>
           </div>
         </div>
@@ -264,20 +140,34 @@
     </div>
   </div>
 </section>
+<!-- ou team end  -->
+
+<!-- contact  -->
 <div class="container mt-md-5 mb-0">
   <div class="row justify-content-center">
     <div class="col-md-8 text-center">
       <h2 class="mb-4 fs-1">Contact Us</h2>
       <blockquote class="blockquote mb-0">
         <p class="pb-1">The Luxury Apartments in the City</p>
-        <footer class="blockquote-footer ">SGS <cite title="Source Title">Apartments</cite></footer>
+        <footer class="blockquote-footer">
+          SGS <cite title="Source Title">Apartments</cite>
+        </footer>
       </blockquote>
       <div>
         <div>
-          <a [routerLink] = "'/contact'" class="btn btn-custom-outline btn-lg me-4 mt-4">Apartments</a>
-          <a [routerLink] = "'/contact'" class="btn btn-lg btn-outline-success mt-4">Contact</a>
+          <a
+            [routerLink]="'/apartments'"
+            class="btn btn-custom-outline btn-lg me-4 mt-4"
+            >Apartments</a
+          >
+          <a
+            [routerLink]="'/contact'"
+            class="btn btn-lg btn-outline-success mt-4"
+            >Contact</a
+          >
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- contact end  -->

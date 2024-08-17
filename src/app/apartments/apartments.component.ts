@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
-import { ApartmentService,Apartment } from '../Services/aparment.service'; 
+import { ApartmentService } from '../Services/aparment.service'; 
+import { Apartment } from '../Models/apartment';
 
 @Component({
   selector: 'apartments',

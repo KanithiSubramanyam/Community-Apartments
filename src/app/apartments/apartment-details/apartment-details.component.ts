@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterLink, RouterModule } from '@angular/router';
-import { ApartmentService,Apartment } from '../../Services/aparment.service';  
+import { ApartmentService } from '../../Services/aparment.service';  
 import { CommonModule } from '@angular/common';
+import { Apartment } from '../../Models/apartment';
 
 @Component({
   selector: 'apartment-details',

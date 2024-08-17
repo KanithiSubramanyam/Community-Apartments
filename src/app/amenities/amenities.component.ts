@@ -10,4 +10,5 @@ import { Component } from '@angular/core';
 export class AmenitiesComponent {
   aboutUsBreadcome = "assets/aboutUsBreadcome.jpg";
 
+  amenities = [];
 }
