@@ -43,7 +43,7 @@ export class ApartmentService {
     },
     {
       name: 'Apartment Name 2',
-      price: '$1,500/month',
+      price: '$1,500/month', 
       availability: 'Not Available',
       imageUrl: 'assets/apar-2.jpg',
       features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
