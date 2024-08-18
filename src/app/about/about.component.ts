@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
 import { RouterLink } from '@angular/router';
-import { ServicesService } from '../Services/services.service';
+import { ServicesService } from '../Models/Services/services.service';
 import { Services } from '../Models/services';
 import { AboutUsMainComponent } from "./about-us-main/about-us-main.component";
+import { BreadcrumComponent } from '../Utilites/breadcrum/breadcrum.component';
 
 @Component({
   selector: 'about',
   standalone: true,
-  imports: [CommonModule, CounterComponent, RouterLink, AboutUsMainComponent],
+  imports: [CommonModule, CounterComponent, RouterLink, AboutUsMainComponent, BreadcrumComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
@@ -17,13 +18,19 @@ export class AboutComponent {
   aboutUs1 = "assets/interior-2.jpg";
   aboutUs2 = "assets/homeAboutUs-2.jpg";
   hotelIcon = "assets/hotelIcon.png";
-  aboutUsBreadcome = "assets/aboutUsBreadcome.jpg";
   aboutUsAchivements = "assets/aboutUsAchivements.jpg";
   pp = "assets/pp.jpg";
 
   services : Services[] ;
 
   servicesService : ServicesService = inject(ServicesService);
+
+  breadcrumData = 
+    {
+      title : "The Ultimate Luxury",
+      subtitle : "SGS Apartments",
+    }
+  
 
   ourTeam : Array<any> = [
     {

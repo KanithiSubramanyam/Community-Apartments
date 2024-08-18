@@ -5,7 +5,7 @@ import { ApartmentsComponent } from './apartments/apartments.component';
 import { AmenitiesComponent } from './amenities/amenities.component';
 import { ContactComponent } from './contact/contact.component';
 import { ApartmentDetailsComponent } from './apartments/apartment-details/apartment-details.component'; 
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './Utilites/not-found/not-found.component';
 
 export const routes: Routes = [
     {path : '', component : HomeComponent},

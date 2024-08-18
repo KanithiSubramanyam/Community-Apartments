@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { Services } from '../Models/services';
-import { ServicesService } from '../Services/services.service';
+import { ServicesService } from '../Models/Services/services.service';
 import { AboutUsMainComponent } from '../about/about-us-main/about-us-main.component';
 import { Apartment } from '../Models/apartment';
-import { ApartmentService } from '../Services/aparment.service';
+import { ApartmentService } from '../Models/Services/aparment.service';
 import { map } from 'rxjs';
-import {AmenitiesService} from '../Services/amenities.service';
+import {AmenitiesService} from '../Models/Services/amenities.service';
 import { Amenities } from '../Models/amenities';
 import { ContactFormComponent } from '../contact/contact-form/contact-form.component';
 @Component({

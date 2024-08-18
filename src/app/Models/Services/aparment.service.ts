@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Apartment } from '../Models/apartment';
+import { Apartment } from '../apartment';
 import { map } from 'rxjs';
 
 

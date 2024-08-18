@@ -1,12 +1,4 @@
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #ffffff;
-    }
-
- .info-box {
+.info-box {
   padding : 25px 50px;
   color: #758694;
 }
