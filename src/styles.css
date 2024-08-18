@@ -13,8 +13,25 @@ body {
   .bg-color {
     background-color: #405D72;
   }
-  
   .bg-color:hover {
     background-color: #758694;
   }
+  .btn-custom-outline {
+    border-color: #ffc49d !important;
+    color: #ffc49d !important;
+  }
+  .btn-custom-outline:hover {
+    background-color: #ffc49d !important;
+    color: #fff !important;
+  }
+
+  .text-color{
+    color: #758694 !important;
+  }
+  .text-secondary-color {
+    color: #ffc49d !important;
+  }
   
+  .breadcrumb{
+    margin-top: 100px !important;
+}

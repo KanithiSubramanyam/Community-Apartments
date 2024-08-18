@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup; // Use definite assignment assertion
   submitted = false;
+  aboutUsBreadcome = "assets/aboutUsBreadcome.jpg";
 
   constructor(private formBuilder: FormBuilder) {}
 
