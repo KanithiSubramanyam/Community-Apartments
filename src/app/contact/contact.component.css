@@ -9,27 +9,4 @@
  .info-box {
   padding : 25px 50px;
   color: #758694;
-
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: inline-block;
-}
-
-input.form-control,
-textarea.form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-}
-
-.is-invalid {
-  border-color: #dc3545;
-}
-
-.invalid-feedback {
-  color: #dc3545;
 }

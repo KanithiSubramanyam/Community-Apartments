@@ -8,10 +8,11 @@ import { ApartmentService } from '../Services/aparment.service';
 import { map } from 'rxjs';
 import {AmenitiesService} from '../Services/amenities.service';
 import { Amenities } from '../Models/amenities';
+import { ContactFormComponent } from '../contact/contact-form/contact-form.component';
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [CommonModule, AboutUsMainComponent],
+  imports: [CommonModule, AboutUsMainComponent, ContactFormComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
