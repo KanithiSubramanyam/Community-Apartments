@@ -33,7 +33,7 @@ export class ApartmentService {
     },
     {
       name: 'Apartment Name 2',
-      price: '$1,500/month',
+      price: '$1,500/month', 
       availability: 'Not Available',
       imageUrl: 'assets/apar-2.jpg',
       features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],

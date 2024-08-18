@@ -1,3 +1,81 @@
 .contact{
     margin-top: 100px !important;
 }
+/* Main container styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Form container styles */
+.form-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+textarea#message {
+  height: 150px; /* Ensures larger text area */
+}
+
+/* Submit button styles */
+.text-center button {
+  padding: 15px 70px; /* Make the button larger */
+  font-size: 18px; /* Larger font size */
+  border-radius: 5px;
+  margin-top:10px;
+}
+
+/* Info container styles */
+.info-container {
+  max-width: 300px;
+  width: 100%;
+}
+
+.info-container .info-box {
+  margin-bottom: 10px; /* Decrease space between boxes */
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  text-align: center;
+  
+}
+.info-box p{
+  color:red;
+}
+
+/* General styles */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+input.form-control,
+textarea.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+}
