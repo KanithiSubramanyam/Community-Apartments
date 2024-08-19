@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { ApartmentService } from '../Services/aparment.service'; 
@@ -23,10 +23,9 @@ export class ApartmentsComponent implements OnInit {
     subtitle : "SGS Apartments",
   }
 
-  constructor(private apartmentService: ApartmentService) {}
+  apartmentService : ApartmentService = inject(ApartmentService);
 
   ngOnInit() {
-
     this.apartmentService.getApartments().subscribe((apartments: Apartment[]) => {
       this.apartments = apartments;
     });

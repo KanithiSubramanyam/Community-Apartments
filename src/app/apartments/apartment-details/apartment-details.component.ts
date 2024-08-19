@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterLink, RouterModule } from '@angular/router';
 import { ApartmentService } from '../../Services/aparment.service';  
@@ -18,28 +18,35 @@ export class ApartmentDetailsComponent implements OnInit {
   apartment?: Apartment;
   apartmentFeaturesWithIcons: { feature: string; icon: string }[] = [];
   breadcrumData = {
-    title : 'Apartment Details',
-    subtitle : ''
-  }
-  apartmentsData : Apartment[] = [];
+    title: 'Apartment Details',
+    subtitle: ''
+  };
+  apartmentsData: Apartment[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    private apartmentService: ApartmentService
-  ) {}
+  apartmentService: ApartmentService = inject(ApartmentService);
+  currentRoute: ActivatedRoute = inject(ActivatedRoute);
 
   ngOnInit() {
-    const apartmentName = this.route.snapshot.paramMap.get('name');
-    if (apartmentName) {
-      this.apartment = this.apartmentService.getApartmentDetails(apartmentName);
-    }
-    this.breadcrumData.subtitle = this.apartment?.name;
-    this.apartmentFeaturesWithIcons = this.apartment.features.map((feature, index) => ({
-      feature: feature,
-      icon: this.apartment.icons[index]
-    }));
+    // Subscribe to changes in the route parameters
+    this.currentRoute.paramMap.subscribe(paramMap => {
+      const apartmentName = paramMap.get('name');
+      if (apartmentName) {
+        this.loadApartmentDetails(apartmentName);
 
-    //for apartment data
-    this.apartmentsData = this.apartmentService.getAllApartments();
+        this.apartmentsData = this.apartmentService.getAllApartments().filter(apartment => apartment.name !== apartmentName);;
+      }
+    });
+
+  }
+
+  loadApartmentDetails(apartmentName: string) {
+    this.apartment = this.apartmentService.getApartmentDetails(apartmentName);
+    if (this.apartment) {
+      this.breadcrumData.subtitle = this.apartment.name;
+      this.apartmentFeaturesWithIcons = this.apartment.features.map((feature, index) => ({
+        feature: feature,
+        icon: this.apartment.icons[index]
+      }));
+    }
   }
 }
