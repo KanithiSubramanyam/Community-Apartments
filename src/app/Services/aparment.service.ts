@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apartment } from '../Models/apartment';
-<<<<<<< HEAD
-
-=======
-import { map, Observable, of } from 'rxjs';
->>>>>>> c2dfc1f9b0b50c6d0b0c1c5769670387fa3bfcb0
+import { Observable, of } from 'rxjs';
 
 
 @Injectable({
