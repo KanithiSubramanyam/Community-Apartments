@@ -9,10 +9,11 @@ import { map } from 'rxjs';
 import {AmenitiesService} from '../Services/amenities.service';
 import { Amenities } from '../Models/amenities';
 import { ContactFormComponent } from '../contact/contact-form/contact-form.component';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'home',
   standalone: true,
-  imports: [CommonModule, AboutUsMainComponent, ContactFormComponent],
+  imports: [CommonModule, AboutUsMainComponent, ContactFormComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Apartment } from '../Models/apartment';
+<<<<<<< HEAD
 
+=======
+import { map, Observable, of } from 'rxjs';
+>>>>>>> c2dfc1f9b0b50c6d0b0c1c5769670387fa3bfcb0
 
 
 @Injectable({
@@ -13,7 +17,7 @@ export class ApartmentService {
       name: 'Apartment Name 1',
       price: '$1,200/month',
       availability: 'Available-Book Now',
-      imageUrl: 'assets/interior-1.jpg',
+      imageUrl: 'assets/garden-3.jpg',
       features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'This apartment offers stunning views and top-notch facilities.Spacious double-bedroom apartment with a modern kitchen and stunning city views. Includes a private balcony and access to a state-of-the-art gym.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
@@ -219,8 +223,8 @@ export class ApartmentService {
   ];
 
   // Method to get a list of apartments with basic information
-  getApartments(): Omit<Apartment, 'description' | 'amenities'>[] {
-    return this.apartments.map(({ description, amenities, ...basicDetails }) => basicDetails);
+  getApartments(): Observable<Apartment[]> {
+    return of(this.apartments);
   }
 
   // Method to get detailed information of a specific apartment by name

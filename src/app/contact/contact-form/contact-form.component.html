@@ -1,4 +1,10 @@
-<form class="" [formGroup]="contactForm" (ngSubmit)="onFormSubmitted()">
+<div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="alert">
+  Your Form has been submitted!
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+<form class="" [formGroup]="contactForm" (ngSubmit)="onFormSubmitted()" >
     <div
       class="form-row d-flex flex-column flex-md-row justify-content-between gap-3 mb-3"
     >
@@ -14,7 +20,7 @@
         <small class="text-danger"
           *ngIf="contactForm.get('name').errors?.['required'] &&
             contactForm.get('name').touched"
-          >* name is required field
+          >* Name is required field
         </small>
       </div>
 
@@ -45,10 +51,14 @@
           class="form-control"
           placeholder="Your Address"
         />
+        <small class="text-danger" *ngIf="contactForm.get('address').errors?.['required'] &&
+          contactForm.get('address').touched"
+        >* Address is required field
+        </small>
       </div>
       <div class="form-group col-md-6">
         <label for="contactNumber" class="text-muted fw-bold p-1"
-          >Contact Number *</label
+          >* Contact Number </label
         >
         <input
           type="text"
@@ -76,12 +86,12 @@
       <small class="text-danger"
         *ngIf="contactForm.get('message').errors?.['required'] &&
           contactForm.get('message').touched"
-        >* Contact Number is required field
+        >* Query message is required field
         </small>
     </div>
 
     <div class="text-center m-3 p-3 px-2">
-      <button type="submit" class="btn btn-custom-outline btn-lg">
+      <button type="submit" class="btn btn-custom-outline btn-lg" [disabled]="!contactForm.valid">
         Submit
       </button>
     </div>

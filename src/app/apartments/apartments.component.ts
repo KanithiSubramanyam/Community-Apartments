@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { ApartmentService } from '../Services/aparment.service'; 
@@ -15,7 +15,7 @@ import { BreadcrumComponent } from '../Utilites/breadcrum/breadcrum.component';
 export class ApartmentsComponent implements OnInit {
   aboutUsBreadcome = "assets/aboutUsBreadcome.jpg";
 
-  apartments: Omit<Apartment, 'description' | 'amenities'>[] = [];
+  apartments: Apartment[] = [];
 
   breadcrumData = 
   {
@@ -23,10 +23,12 @@ export class ApartmentsComponent implements OnInit {
     subtitle : "SGS Apartments",
   }
 
-  constructor(private apartmentService: ApartmentService) {}
+  apartmentService : ApartmentService = inject(ApartmentService);
 
   ngOnInit() {
-    this.apartments = this.apartmentService.getApartments();
-    // console.log(this.apartments);
+    this.apartmentService.getApartments().subscribe((apartments: Apartment[]) => {
+      this.apartments = apartments;
+    });
+    
   }
 }

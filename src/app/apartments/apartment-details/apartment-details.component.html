@@ -1,60 +1,101 @@
 <div class="apartment-details" *ngIf="apartment">
-  <div class="image-container position-relative m-0 p-0">
-    <img
-      class="w-100"
-      src="https://res.cloudinary.com/dljmzqxza/images/c_fill/f_auto,q_100/v1679476400/building-amenities-lounge-area/building-amenities-lounge-area.jpg?_i=AA"
-      height="300px"
-      alt="Apartment Details"
-    />
-    <div class="overlay">
-      <p class="fw-bolder" style="font-family: sans-serif">THE ULTIMATE LUXURY</p>
-      <h2>Apartment Details</h2>
-    </div>
-  </div>
-  
-  <div class="jumbotron jumbotron-fluid py-4">
-    <h2 class="apartment-name">{{ apartment.name }}</h2>
-    
-    <img
-      [src]="apartment.imageUrl"
-      alt="{{ apartment.name }}"
-      class="apartment-image img-fluid mb-3"
-    />
-    
-    <h5 class="price">Price: {{ apartment.price }}</h5>
-    
-    <p class="description">{{ apartment.description }}</p>
-  </div>
-  
-  <div class="details-container ">
-    <h3 class="section-heading ">Amenities Provided</h3>
-    
-    <ul class="amenities list-group list-group-flush ">
-      <li class="list-group-item" *ngFor="let amenity of apartment.amenities">
-        <i class="fas fa-check-circle"></i> {{ amenity }}
-      </li>
-    </ul>
-    
-    <div class="jumbotron jumbotron-fluid py-4">
-      <h3 class="section-heading">House Rules</h3>
-      <div class="underline"></div>
-      <ul class="house-rules list-group">
-        <li class="list-group-item" *ngFor="let rule of apartment.houseRules">
-          <i class="fas fa-check"></i> {{ rule }}
-        </li>
-      </ul>
-    </div>
+  <breadcrum [breadcrumData]="breadcrumData"></breadcrum>
 
-    <div class="cancellation-policy mt-4">
-      <h3>Cancellation Policy</h3>
-      <p class="cancellation-description">{{ apartment.cancellation }}</p>
+  <div class="d-flex flex-row mt-5">
+    <div class="col-md-8">
+      <h2
+        class="pt-4 p-2 px-2 ms-5 border-bottom border-3 border-dark text-color"
+        style="width: fit-content"
+      >
+        {{ apartment.name }}
+      </h2>
+      <div class="p-4 d-flex flex-row row">
+        <img
+          [src]="apartment.imageUrl"
+          alt="{{ apartment.name }}"
+          class="img-fluid rounded-5 h-75"
+        />
+        <div class="p-md-5 d-flex flex-column justify-content-center">
+          <h4 class="text-color">Price: {{ apartment.price }}</h4>
+          <p class="description ps-2 fs-6">{{ apartment.description }}</p>
+          <div class="d-flex flex-row flex-wrap mb-2 ps-2">
+            <div
+              *ngFor="let item of apartmentFeaturesWithIcons"
+              class="my-2 pe-5"
+            >
+              <i class="fas pe-2" [ngClass]="'fa-' + item.icon"></i
+              ><span> {{ item.feature }}</span>
+            </div>
+          </div>
+          <div class="details-container my-4">
+            <h4 class="text-color" style="width: fit-content">
+              Amenities Provided
+            </h4>
+            <ul class="p-0 ps-2">
+              <li
+                class="py-2 fs-6 list-unstyled"
+                *ngFor="let amenity of apartment.amenities"
+              >
+                <i class="fas fa-check-circle"></i> {{ amenity }}
+              </li>
+            </ul>
+            <div class="py-2">
+              <h4 class="text-color py-2">House Rules</h4>
+              <ul class="p-0 ps-2">
+                <li
+                  class="list-unstyled py-2 fs-6"
+                  *ngFor="let rule of apartment.houseRules"
+                >
+                  <i class="fas fa-check-circle"></i> {{ rule }}
+                </li>
+              </ul>
+            </div>
+            <div class="py-2">
+              <h4 class="text-color py-2">Cancellation Policy</h4>
+              <p class="cancellation-description">
+                {{ apartment.cancellation }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    
+    <div class="col-md-4">
+      <div class="d-flex flex-column justify-content-start mt-2">
+        <h2
+          class="pt-4 p-2 px-2 ms-2 border-bottom border-3 border-dark text-color"
+          style="width: fit-content"
+        >
+          Similar Apartments
+        </h2>
+        <div class="mx-2 my-3" *ngFor="let apartment of apartmentsData">
+          <img
+            [src]="apartment.imageUrl"
+            alt="{{ apartment.name }}"
+            class="img-fluid w-25 h-25 m-2 rounded"
+          />
+          <span class="similarApartments fw-semibold fs-5" [routerLink]="['/apartments', apartment.name]" style="cursor: pointer;">{{ apartment.name }}</span>
+        </div>
+        <div class="mx-2 my-3">
+          <h2
+            class="pt-4 p-2 px-2 ms-2 border-bottom border-3 border-dark text-color"
+            style="width: fit-content"
+          >
+            Features
+          </h2>
+          <div class="m-2 pe-5 mt-4">
+            <div *ngFor="let item of apartmentFeaturesWithIcons" class="my-2">
+              <i class="fas pe-2" [ngClass]="'fa-' + item.icon"></i
+              ><span class="fs-5 text-secondary"> {{ item.feature }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="btn-container">
-    <a routerLink="/apartments" class="btn btn-center btn-primary mt-3 ">Back to Apartments</a>
-
+  <div class="text-center">
+    <button routerLink="/apartments" class="btn btn-custom-outline mt-3">
+      Back to Apartments
+    </button>
   </div>
-  
 </div>

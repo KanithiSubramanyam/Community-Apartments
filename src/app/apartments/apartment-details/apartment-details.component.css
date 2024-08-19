@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .apartment-details {
     padding: 20px;
     margin-top: 100px !important;
@@ -210,3 +211,9 @@
 
   
   
+=======
+.similarApartments:hover{
+    color: #405D72;
+    font-weight: bolder !important;
+}
+>>>>>>> c2dfc1f9b0b50c6d0b0c1c5769670387fa3bfcb0
