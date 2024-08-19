@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, Input } from '@angular/core';
 import { CounterComponent } from './counter/counter.component';
 import { RouterLink } from '@angular/router';
-import { ServicesService } from '../Models/Services/services.service';
+import { ServicesService } from '../Services/services.service';
 import { Services } from '../Models/services';
 import { AboutUsMainComponent } from "./about-us-main/about-us-main.component";
 import { BreadcrumComponent } from '../Utilites/breadcrum/breadcrum.component';

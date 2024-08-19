@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Apartment } from '../apartment';
+import { Apartment } from '../Models/apartment';
 import { map } from 'rxjs';
 
 
@@ -29,7 +29,8 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 2',
@@ -51,7 +52,8 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 3',
@@ -73,14 +75,15 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 4',
       price: '$1,200/month',
       availability: 'Available-Book Now',
       imageUrl: 'assets/apar-4.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'Cozy apartment with beautiful interiors.Elegant apartment featuring a large master suite and an open-concept living area. Enjoy exclusive amenities such as a rooftop pool and 24/7 concierge service.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -95,14 +98,15 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 5',
       price: '$1,400/month',
       availability: 'Not Available',
       imageUrl: 'assets/apar-5.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'Perfect for families, with a community vibe.Spacious double-bedroom apartment with a modern kitchen and stunning city views. Includes a private balcony and access to a state-of-the-art gym.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -117,14 +121,15 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 6',
       price: '$1,500/month',
       availability: 'Available-Book Now',
       imageUrl: 'assets/apar-6.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'Elegant and stylish apartment with great amenities.Elegant apartment featuring a large master suite and an open-concept living area. Enjoy exclusive amenities such as a rooftop pool and 24/7 concierge service.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -139,14 +144,15 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 7',
       price: '$1,300/month',
       availability: 'Available-Book Now',
       imageUrl: 'assets/apar-7.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'An apartment with a peaceful and relaxing atmosphere.Spacious double-bedroom apartment with a modern kitchen and stunning city views. Includes a private balcony and access to a state-of-the-art gym.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -161,14 +167,15 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 8',
       price: '$1,600/month',
       availability: 'Not Available',
       imageUrl: 'assets/apar-8.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'Modern living with convenience and style.Elegant apartment featuring a large master suite and an open-concept living area. Enjoy exclusive amenities such as a rooftop pool and 24/7 concierge service.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -183,14 +190,15 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     },
     {
       name: 'Apartment Name 9',
       price: '$1,700/month',
       availability: 'Available-Book Now',
       imageUrl: 'assets/apar-9.jpg',
-      features: ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree'],
+      features: ['Cellur Parking with security', 'wifi Throughout Apartment', 'Fully Furnished Flats', 'Fitness Center with Air Conditioner', 'Natured Child play area'],
       description: 'A premium apartment with exclusive access.Spacious double-bedroom apartment with a modern kitchen and stunning city views. Includes a private balcony and access to a state-of-the-art gym.',
       amenities: ['Swimming Pool: Enjoy a luxurious, resort-style swimming pool for relaxation and recreation.', 
         'Gym: Stay fit and healthy with access to our fully equipped gym.', 
@@ -205,7 +213,8 @@ export class ApartmentService {
         'Download Our minimal app.',
         'Browse regularly on our website.',
       ],
-      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.'
+      cancellation: 'Phasellus volutpat neque a tellus venenatis, a euismod augue facilisis. Fusce ut metus mattis, consequat metus nec, luctus lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to 14 days to get a full refund.',
+      icons : ['car', 'wifi', 'bed', 'utensils', 'dumbbell', 'tree']
     }
   ];
 

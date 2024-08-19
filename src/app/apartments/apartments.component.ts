@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
-import { ApartmentService } from '../Models/Services/aparment.service'; 
+import { ApartmentService } from '../Services/aparment.service'; 
 import { Apartment } from '../Models/apartment';
 import { BreadcrumComponent } from '../Utilites/breadcrum/breadcrum.component';
 
@@ -27,5 +27,6 @@ export class ApartmentsComponent implements OnInit {
 
   ngOnInit() {
     this.apartments = this.apartmentService.getApartments();
+    // console.log(this.apartments);
   }
 }

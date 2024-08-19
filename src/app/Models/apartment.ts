@@ -9,6 +9,7 @@ export class Apartment{
         public description: string,
         public amenities: string[],
         public houseRules: string[],
-        public cancellation: string
+        public cancellation: string,
+        public icons: string[]
     ){}
 }
