@@ -20,13 +20,13 @@ ul.list-unstyled i {
 
 .carousel-item img {
     object-fit: cover;
-    height: 300px; /* Adjust based on your needs */
+    height: 300px; 
     margin-top: 10px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #000; /* Custom color for the carousel controls */
+    background-color: #000; 
 }
 
 @media (max-width: 767.98px) {

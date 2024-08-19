@@ -1,10 +1,9 @@
-/* Container for the entire details section */
 .apartment-details {
     padding: 20px;
     margin-top: 100px !important;
   }
   
-  /* Style for the image container */
+  
   .image-container {
     position: relative;
   }
@@ -41,41 +40,41 @@
     font-family: Old Standard TT, serif;
   }
   
-  /* Style for the details container */
+  
   .details-container {
     text-align: center;
     margin-top: 70px;
     background-color: #f8f9fa;
   }
   
-  /* Style for the apartment name */
+  
   .apartment-name {
     margin: 20px 0;
     font-size: 2em;
   }
   
-  /* Style for the apartment image */
+  
   .apartment-image {
     height: 300px;
     width: 500px;
     margin: 20px auto;
   }
   
-  /* Style for the price */
+  
   .price {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 20px;
   }
   
-  /* Style for the description */
+ 
   .description {
     font-size: 1.1em;
     color: #444;
     margin: 20px 0;
   }
   
-  /* Style for section headings */
+ 
   .section-heading {
     margin-top: 40px;
     font-size: 1.5em;
@@ -84,7 +83,7 @@
     position: relative;
   }
   
-  /* Underline for section headings */
+  
   .underline {
     width: 60%;
     height: 2px;
@@ -92,7 +91,7 @@
     margin: 0 auto 20px auto;
   }
   
-  /* Style for the amenities list */
+  
   .amenities {
     list-style: none;
     padding: 0;
@@ -111,18 +110,18 @@
     justify-content: flex-start;
     margin-bottom: 10px;
     width: 100%;
-    border: none; /* No borders between list items */
-    background-color: transparent; /* Transparent background for list items */
-    font-size: 1.1em; /* Slightly larger font size for list items */
-    padding: 10px 0; /* Padding for top and bottom of list items */
+    border: none; 
+    background-color: transparent; 
+    font-size: 1.1em; 
+    padding: 10px 0; 
   }
   
   .amenities .list-group-item i {
-    color: #28a745; /* Green color for check icon */
-    margin-right: 10px; /* Space between icon and text */
+    color: #28a745;
+    margin-right: 10px; 
   }
   
-  /* Style for the house rules list */
+  
   .house-rules {
     list-style: none;
     padding: 0;
@@ -141,74 +140,71 @@
     justify-content: flex-start;
     margin-bottom: 10px;
     width: 100%;
-    border: none; /* No borders between list items */
-    background-color: transparent; /* Transparent background for list items */
-    font-size: 1.1em; /* Slightly larger font size for list items */
-    padding: 10px 0; /* Padding for top and bottom of list items */
-    padding-left: 20px; /* Left padding for alignment */
+    border: none; 
+    background-color: transparent; 
+    font-size: 1.1em;
+    padding: 10px 0; 
+    padding-left: 20px; 
   }
   
   .house-rules .list-group-item i {
-    color: #111010; /* Red color for house rules check icon */
-    margin-right: 10px; /* Space between icon and text */
+    color: #111010; 
+    margin-right: 10px; 
   }
   
-  /* Styles for the jumbotron-like background */
+  
   .jumbotron {
     text-align: center;
-    background-color: #dbd8d8; /* Light grey color for jumbotron background */
-    border-radius: 8px; /* Rounded corners for jumbotron */
-    padding: 30px; /* Padding inside the jumbotron */
-    margin-top: 70px; /* Space above the jumbotron */
-    margin-bottom: 40px; /* Space below the jumbotron */
+    background-color: #dbd8d8; 
+    border-radius: 8px; 
+    padding: 30px; 
+    margin-top: 70px; 
+    margin-bottom: 40px; 
 
   }
   
-  /* Back button styling */
+  
   .btn-primary {
-    background-color: #007bff; /* Default blue background for button */
-    border-color: #007bff; /* Default blue border for button */
+    background-color: #007bff; 
+    border-color: #007bff; 
 
   }
   
   .btn-primary:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    border-color: #004085; /* Darker border on hover */
+    background-color: #0056b3;
+    border-color: #004085; 
   }
-  /* .btn{
-    display: flex;
-    justify-content: center;
-  } */
+ 
   .cancellation-policy {
     padding: 15px;
-    background-color: #f8f9fa; /* Light background to distinguish the section */
-    border-radius: 5px; /* Smooth rounded corners */
-    margin-top: 20px; /* Space above the cancellation section */
+    background-color: #f8f9fa; 
+    border-radius: 5px; 
+    margin-top: 20px; 
   }
   
   .cancellation-policy h3 {
-    margin-bottom: 20px; /* Space between the heading and the description */
-    font-weight: bold; /* Bold font for the heading */
+    margin-bottom: 20px; 
+    font-weight: bold; 
     
-    color: #333; /* Dark color for the heading */
+    color: #333; 
   }
   
   .cancellation-description {
-    font-size: 16px; /* Adjust font size for readability */
-    line-height: 1.5; /* Increased line height for better spacing between lines */
-    color: #555; /* Slightly darker color for readability */
-    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
-    margin-bottom: 10px; /* Small gap after the description */
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #555; 
+    font-family: 'Arial', sans-serif; 
+    margin-bottom: 10px; 
   }
   .btn-container {
     display: flex;
-    justify-content: center; /* Centers the button horizontally */
-    margin-top: 20px; /* Adds space above the button */
+    justify-content: center; 
+    margin-top: 20px; 
   }
   
   .btn-primary {
-    padding: 10px 20px; /* Adjusts padding for a better button appearance */
-    font-size: 16px; /* Sets a readable font size */
+    padding: 10px 20px; 
+    font-size: 16px; 
   }
   
 

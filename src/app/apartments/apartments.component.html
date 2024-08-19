@@ -2,13 +2,13 @@
 
     <div class="container mt-4">
         <div class="row">
-          <!-- Use *ngFor to loop over the apartments array -->
+          
           <div class="col-lg-4 col-sm-6 mb-4" *ngFor="let apartment of apartments">
             <div class="card">
               <img [src]="apartment.imageUrl" class="card-img-top" alt="Apartment Image" style="height:200px;">
               <div class="card-body">
                 <div class="d-flex justify-content-around mb-2">
-                  <!-- Loop over features array to display icons -->
+                  
                   <ng-container *ngFor="let icon of apartment.icons">
                     <i class="fas" [ngClass]="'fa-' + icon"></i>
                   </ng-container>

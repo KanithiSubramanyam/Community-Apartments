@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Apartment } from '../Models/apartment';
-import { map } from 'rxjs';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApartmentService {
-  // List of apartments with detailed information
+  
   private apartments: Apartment[] = [
     {
       name: 'Apartment Name 1',
