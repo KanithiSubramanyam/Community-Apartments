@@ -13,6 +13,6 @@ export const routes: Routes = [
     {path: 'apartments', component:ApartmentsComponent},
     {path : 'amenities', component : AmenitiesComponent},
     {path : 'contact', component : ContactComponent},
-    { path: 'apartments/:name', component: ApartmentDetailsComponent },
+    {path: 'apartments/:name', component: ApartmentDetailsComponent },
     {path : '**', component : NotFoundComponent}
 ];

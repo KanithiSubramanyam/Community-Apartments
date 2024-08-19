@@ -15,7 +15,7 @@ import { BreadcrumComponent } from '../Utilites/breadcrum/breadcrum.component';
 export class ApartmentsComponent implements OnInit {
   aboutUsBreadcome = "assets/aboutUsBreadcome.jpg";
 
-  apartments: Omit<Apartment, 'description' | 'amenities'>[] = [];
+  apartments: Apartment[] = [];
 
   breadcrumData = 
   {
@@ -26,7 +26,10 @@ export class ApartmentsComponent implements OnInit {
   constructor(private apartmentService: ApartmentService) {}
 
   ngOnInit() {
-    this.apartments = this.apartmentService.getApartments();
-    // console.log(this.apartments);
+
+    this.apartmentService.getApartments().subscribe((apartments: Apartment[]) => {
+      this.apartments = apartments;
+    });
+    
   }
 }
